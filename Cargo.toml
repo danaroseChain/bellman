@@ -12,6 +12,7 @@ edition = "2018"
 [patch.crates-io]
 ff = { git= "https://github.com/zkcrypto/ff" }
 group = {git ="https://github.com/zkcrypto/group"}
+pairing = {git = "https://github.com/zkcrypto/pairing"}
 
 
 [dependencies]

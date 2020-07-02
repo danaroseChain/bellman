@@ -4,7 +4,7 @@ description = "zk-SNARK library"
 readme = "README.md"
 homepage = "https://github.com/ebfull/bellman"
 license = "MIT/Apache-2.0"
-name = "danasellman"
+name = "danasbellman"
 version = "0.6.0"
 edition = "2018"
 

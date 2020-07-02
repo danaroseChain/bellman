@@ -8,12 +8,11 @@ name = "danasbellman"
 version = "0.6.0"
 edition = "2018"
 
-[patch.crates-io]
-ff = { git= "https://github.com/zkcrypto/ff" }
-pairing= {git = "https://github.com/zkcrypto/pairing"}
-group = {git = "https://github.com/zkcrypto/group"}
 
 [dependencies]
+ff = "0.6.0"
+pairing = "0.16.0"
+group = "0.6.0"
 bit-vec = "0.4.4"
 blake2s_simd = "0.5"
 futures = "0.1"
@@ -29,6 +28,10 @@ rand = "0.7"
 rand_xorshift = "0.2"
 sha2 = "0.8"
 
+[features]
+groth16 = ["pairing"]
+multicore = ["futures-cpupool", "crossbeam", "num_cpus"]
+default = ["groth16", "multicore"]
 
 [[test]]
 name = "mimc"

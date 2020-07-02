@@ -33,7 +33,7 @@ sha2 = "0.8"
 
 [features]
 multicore = ["futures-cpupool", "crossbeam", "num_cpus"]
-default = ["groth16", "multicore"]
+
 
 [[test]]
 name = "mimc"

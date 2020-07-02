@@ -4,24 +4,24 @@ description = "zk-SNARK library"
 readme = "README.md"
 homepage = "https://github.com/ebfull/bellman"
 license = "MIT/Apache-2.0"
-name = "bellman"
-repository = "https://github.com/ebfull/bellman"
+name = "danasellman"
 version = "0.6.0"
 edition = "2018"
 
 [patch.crates-io]
 ff = { git= "https://github.com/zkcrypto/ff" }
-group = {git ="https://github.com/zkcrypto/group"}
-pairing = {git = "https://github.com/zkcrypto/pairing"}
-groth16 = {git="https://github.com/danaroseChain/bellman/tree/master/src/groth16"}
+
 
 [dependencies]
 bit-vec = "0.4.4"
 blake2s_simd = "0.5"
+ff = { version = "0.6", path = "../ff" }
 futures = "0.1"
 futures-cpupool = { version = "0.1", optional = true }
+group = { version = "0.6", path = "../group" }
 num_cpus = { version = "1", optional = true }
 crossbeam = { version = "0.7", optional = true }
+pairing = { version = "0.16", path = "../pairing", optional = true }
 rand_core = "0.5"
 byteorder = "1"
 
@@ -32,8 +32,9 @@ rand_xorshift = "0.2"
 sha2 = "0.8"
 
 [features]
+groth16 = ["pairing"]
 multicore = ["futures-cpupool", "crossbeam", "num_cpus"]
-
+default = ["groth16", "multicore"]
 
 [[test]]
 name = "mimc"

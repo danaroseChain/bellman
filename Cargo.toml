@@ -20,7 +20,7 @@ crossbeam = { version = "0.7", optional = true }
 rand_core = "0.5"
 byteorder = "1"
 
-[patch.crates-io]
+[source.crates-io]
 ff = {git="https://github.com/zkcrypto/ff"}
 pairing = {git = "https://github.com/zkcrypto/pairing"}
 group ={git = "https://github.com/zkcrypto/group"}

@@ -10,6 +10,9 @@ edition = "2018"
 
 
 [dependencies]
+ff  = "0.6.0"
+pairing = "0.16.0"
+group = "0.6.0"
 
 bit-vec = "0.4.4"
 blake2s_simd = "0.5"
@@ -20,10 +23,7 @@ crossbeam = { version = "0.7", optional = true }
 rand_core = "0.5"
 byteorder = "1"
 
-[source.crates-io]
-ff = {git="https://github.com/zkcrypto/ff"}
-pairing = {git = "https://github.com/zkcrypto/pairing"}
-group ={git = "https://github.com/zkcrypto/group"}
+
 
 
 [dev-dependencies]
